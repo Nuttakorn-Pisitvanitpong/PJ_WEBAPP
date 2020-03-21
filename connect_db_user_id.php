@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "user_mys";
+$dbname = "mini_pj";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
