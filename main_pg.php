@@ -7,9 +7,6 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
 </head>
 <body>
-    
-    <video class="afterglow" id="myvideo" width="300" height="400">
-    <source type="video/mp4" src="/path/to/myvideo.mp4" />
-    </video>
+    <a href="add_video.php">อัพโหลดคริปวิดีโอ</a>
 </body>
 </html>

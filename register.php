@@ -12,14 +12,14 @@ if(mysqli_num_rows($result) == 0 ){
     echo $sql;
     if (mysqli_query($conn, $sql)) {
         echo "ลงทะเบียนเส็จสิ้น";
-        header("location:main_pg.php")
+        header("location:main_pg.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
 
     mysqli_close($conn);
 }else{
-    echo "User name ถูกใช้งานเเล้ว"
+    echo "User name ถูกใช้งานเเล้ว";
 }
 
 ?>

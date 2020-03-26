@@ -7,8 +7,10 @@
 </head>
 <body>
     <form action="upload1.php" method="post" enctype="multipart/form-data">
-        Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
+        set your video name : <input type="text" name="video_name"><br>
+        Select video to upload:
+        <input type="file" name="videoToUpload"><br>
+        Select imege to upload<input type="file" name="fileToUpload">
         <input type="submit" value="Upload" name="submit">
     </form>
 </body>
