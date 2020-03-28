@@ -1,0 +1,66 @@
+body{
+	background-image: url(images1.jpg);
+	font-family: 'tahoma';
+}
+.panel-heading{
+	border: 5px solid #cccccc;
+	border-radius: : 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-image: url(cl1.jpg);
+}
+.container{
+	border: 5px solid #cccccc;
+	border-radius: : 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-image: url(cl2.jpg);	
+}
+.panel-body{
+	border: 5px solid #cccccc;
+	border-radius: : 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-image: url(cl2.jpg);
+}
+.panel-footer{
+	border: 5px solid #cccccc;
+	border-radius: : 10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	background-image: url(‪cl1.jpg);
+}
+.panel-title{
+	text-decoration:underline ;
+}
+
+
+.main{
+	display: block;
+	list-style-type: disc;
+
+}
+
+.header{
+	position: fixed;
+	background-image: url(images1.jpg);
+	background-repeat: no-repeat;
+	border: 1px solid rgba(0,0,0,0.6);
+	box-shadow: 0px 0px 10px #000;
+	filter: none;
+	height: 50px;
+	width: 100%;
+	z-index: 9999;
+	display: block;
+}
+.header ul{
+	display: block;
+	list-style-type: disc;
+}
+.item img{
+	border: 5px solid #cccccc;
+	width: 600px;
+	border-radius: : 1em 4em 1em 4em / 2em 1em 2em 1em;
+	-moz-border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
+	-webkit-border-radius:1em 4em 1em 4em / 2em 1em 2em 1em;
+}

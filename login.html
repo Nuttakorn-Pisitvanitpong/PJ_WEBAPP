@@ -4,12 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js"></script>
 </head>
 <body>
-<form action="login_fn.php">
-        User Name <input type="text" name="u_id"><br>
-        Password <input type="text" name="u_pass"> <br>
-        <input type="submit" value="Login">
-    </form>
+
+    <div class="panel-heading">
+        <center><font color="black"><h3><strong>LOGIN</strong></h3></font></center>
+    </div>
+    <div class="panel panel-default">
+    <div class="panel-body">
+        <form action="login_fn.php">
+            <div class="form-group">
+            <label for="exampleInputEmail1" >Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="u_id" size="10">
+            
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="u_pass">
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%">Login</button>
+        </form>
+      </div>
+      </div>
+      <a href="register.html" style="width: 100% ;background-color: rgba(245, 19, 19, 0.733)" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Register</a>
+      <br><small id="emailHelp" class="form-text text-muted" >ต้องการลงทะเบียนกดเลย</small>
 </body>
 </html>

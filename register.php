@@ -12,7 +12,7 @@ if(mysqli_num_rows($result) == 0 ){
     echo $sql;
     if (mysqli_query($conn, $sql)) {
         echo "ลงทะเบียนเส็จสิ้น";
-        header("location:main_pg.php");
+        header("location:login.html");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }

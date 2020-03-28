@@ -38,7 +38,7 @@ if($cann_v == "1" and $cann_p == "1" and $video_name != ""){
     $sql="INSERT INTO video (video_name,video_pic,video_lo,u_id)";
     $sql.=" VALUES ('".$video_name."','".$p_name."','".$v_name."','".$_SESSION['user']."')";
     if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
+        header("location:main_pg.php");
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }mysqli_close($conn);

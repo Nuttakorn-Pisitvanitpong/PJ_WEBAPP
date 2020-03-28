@@ -33,7 +33,7 @@ a, a:active {
     bottom: 1px;
     color: rgb(250, 194, 194);
     font-size: 14px;
-    height: 60px;
+    height: 100px;
     line-height: 1.6em;
     overflow: hidden;
     padding: 3px 5px 8px 5px;
@@ -47,11 +47,14 @@ a:-webkit-any-link {
 }
 body {
     background-size: 100%;
-    color: #CCC;
     font-family: 'tahoma';
     font-size: 14px;
     line-height: 1.4em;
     margin: 0;
     padding: 0;
     padding-top: 70px;
+}.afterglow{
+    margin-left: auto;
+    margin-right: auto;
+    display: block
 }

@@ -9,7 +9,7 @@
         session_start();
         $_SESSION['user'] = $row['u_id'];
         $_SESSION['name'] = $row['u_name'];
-        header("location:add_video.php");
+        header("location:main_pg.php");
     }else{
         header("lacation:login.html");
     }
