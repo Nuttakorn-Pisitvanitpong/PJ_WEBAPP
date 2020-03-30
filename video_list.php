@@ -2,7 +2,7 @@
     session_start();
 
     require("connect_db_user_id.php");
-    $sql="SELECT video_name,video_pic,video_lo,video_id FROM video";
+    $sql="SELECT video_name,video_pic,video_lo,video_id,type_v FROM video";
     $sql.=" WHERE u_id ='".$_SESSION["user"]."'";
     $result = mysqli_query($conn, $sql);
 //ลบวิดีโอจาก DB เเละ dir
@@ -42,6 +42,12 @@
                 }  
   
             }
+        }if($send=="Edit"){
+            $v_id = $_REQUEST["v_id"];
+            $sql="SELECT video_pic,video_lo,type_v,video_name FROM video";
+            $sql.=" WHERE video_id = '".$v_id."'";
+            $result = mysqli_query($conn, $sql);
+            
         }
 
 
@@ -110,7 +116,16 @@
                             echo $row["video_name"];
                             echo '<br>';
                             echo "<input type='submit' value='Delete' name='send'>";
+                            
                             echo "<input type='text' name='v_id' hidden value='".$row['video_id']."'>";
+                            echo "</form>";
+                            echo "<form action='edit.php'>";
+                                echo "<input type='text' name='v_id' hidden value='".$row['video_id']."'>";
+                                echo "<input type='text' name='v_name' hidden value='".$row['video_name']."'>";
+                                echo "<input type='text' name='v_lo' hidden value='".$row['video_lo']."'>";
+                                echo "<input type='text' name='v_pic' hidden value='".$row['video_pic']."'>";
+                                echo "<input type='text' name='type_v' hidden value='".$row['type_v']."'>";
+                                echo "<input type='submit' value='Edit' name='send'>";
                             echo "</form>";
                             echo "<form action='watch_video.php'>";
                                 echo "<input type='submit' value='Watch'>";

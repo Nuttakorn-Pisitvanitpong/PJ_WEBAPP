@@ -11,7 +11,7 @@
         $_SESSION['name'] = $row['u_name'];
         header("location:main_pg.php");
     }else{
-        header("lacation:login.html");
+        header("location:login.html");
     }
 
 

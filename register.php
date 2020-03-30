@@ -1,4 +1,5 @@
 <?php
+echo "1";
 require("connect_db_user_id.php");
 $user_id = $_REQUEST["u_id"];
 $user_pass = $_REQUEST["u_pass"];
@@ -19,7 +20,7 @@ if(mysqli_num_rows($result) == 0 ){
 
     mysqli_close($conn);
 }else{
-    echo "User name ถูกใช้งานเเล้ว";
+    echo "User name ถูกใช้งานเเล้ว กรุณาลงทะเบียนใหม่";
 }
 
 ?>

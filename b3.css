@@ -1,5 +1,5 @@
 body{
-	background-image: url(images1.jpg);
+	
 	font-family: 'tahoma';
 }
 .panel-heading{
@@ -7,28 +7,28 @@ body{
 	border-radius: : 10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	background-image: url(cl1.jpg);
+	
 }
 .container{
 	border: 5px solid #cccccc;
 	border-radius: : 10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	background-image: url(cl2.jpg);	
+		
 }
 .panel-body{
 	border: 5px solid #cccccc;
 	border-radius: : 10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	background-image: url(cl2.jpg);
+	
 }
 .panel-footer{
 	border: 5px solid #cccccc;
 	border-radius: : 10px;
 	-moz-border-radius:10px;
 	-webkit-border-radius:10px;
-	background-image: url(‪cl1.jpg);
+	
 }
 .panel-title{
 	text-decoration:underline ;

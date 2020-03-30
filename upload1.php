@@ -1,11 +1,13 @@
 <?php
 //อัพวิดีโอ
+
 $cann_v = "0";
 $cann_p = "0";
 $name = $_FILES["videoToUpload"]["name"];
 $type = explode(".",$name);
 $type = end($type);
 $ran_name = rand();
+$type_v= $_REQUEST["type_v"];
 $temp = $_FILES["videoToUpload"]["tmp_name"];
 if($type=="MP4" || $type=="mp4"){
     move_uploaded_file($temp,"Video/video".$ran_name.'.'.$type);
@@ -35,8 +37,8 @@ if(isset($_REQUEST["video_name"])){$video_name=$_REQUEST["video_name"];}
 require("connect_db_user_id.php");
 echo $_SESSION["user"];
 if($cann_v == "1" and $cann_p == "1" and $video_name != ""){
-    $sql="INSERT INTO video (video_name,video_pic,video_lo,u_id)";
-    $sql.=" VALUES ('".$video_name."','".$p_name."','".$v_name."','".$_SESSION['user']."')";
+    $sql="INSERT INTO video (video_name,video_pic,video_lo,u_id,type_v)";
+    $sql.=" VALUES ('".$video_name."','".$p_name."','".$v_name."','".$_SESSION['user']."','".$type_v."')";
     if (mysqli_query($conn, $sql)) {
         header("location:main_pg.php");
     } else {

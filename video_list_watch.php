@@ -1,10 +1,36 @@
 <?php 
     session_start();
-    $se = $_REQUEST["s_w"];
     require("connect_db_user_id.php");
-    $sql="SELECT video_name,video_pic,video_lo FROM video";
-    $sql.=" WHERE u_id ='".$se."' or video_name='".$se."'";
-    $result = mysqli_query($conn, $sql);
+    $se = $_REQUEST["s_w"];
+    if(isset($_REQUEST["s_w"])){
+        $se = $_REQUEST["s_w"];
+        $type_v = $_REQUEST["type_v"];
+        $sql="SELECT video_name,video_pic,video_lo FROM video";
+        $sql.=" WHERE video_name LIKE '%".$se."%' and type_v='".$type_v."'";
+        $result = mysqli_query($conn, $sql);
+        if($se=="" and $type_v != "หนังทั้งหมด"){
+            $sql="SELECT video_name,video_pic,video_lo FROM video";
+            $sql.=" WHERE type_v = '".$type_v."'";
+            $result = mysqli_query($conn, $sql);
+        }
+        if($se!="" and $type_v == "หนังทั้งหมด"){
+            $sql="SELECT video_name,video_pic,video_lo FROM video";
+            $sql.=" WHERE video_name LIKE '%".$se."%'";
+            $result = mysqli_query($conn, $sql);
+        }
+    }
+
+    
+    if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"];
+        $se = $_REQUEST["s_w"];
+        if($se=="" and $type_v == "หนังทั้งหมด"){
+            $sql="SELECT video_name,video_pic,video_lo FROM video";
+            $result = mysqli_query($conn, $sql);
+        }
+        }
+        
+
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +57,16 @@
                     <li>
                         <form class="form-inline" action="video_list_watch.php">
                             <div class="form-group mx-sm-3 mb-2">
-                            <input type="text" class="form-control" id="inputPassword2" name="s_w" style="heigth: 100%">
+                            <input type="text" class="form-control" id="inputPassword2" name="s_w" style="heigth: 100%" value="<?php echo $se; ?>">
                             </div>
+                            
+                            <select  name="type_v">
+                                <option value="หนังทั้งหมด" <?php if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"]; if($type_v=="หนังทั้งหมด"){echo "selected";}} ?>>หนังทั้งหมด</option>       
+                                <option value="หนังหมา" <?php if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"]; if($type_v=="หนังหมา"){echo "selected";}} ?>>หนังหมา</option>
+                                <option value="หนังจีน" <?php if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"]; if($type_v=="หนังจีน"){echo "selected";}} ?>>หนังจีน</option>
+                                <option value="หนัง18+" <?php if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"]; if($type_v=="หนัง18+"){echo "selected";}} ?>>หนัง18+</option>
+                                <option value="หนังโรง" <?php if(isset($_REQUEST["type_v"])){$type_v = $_REQUEST["type_v"]; if($type_v=="หนังโรง"){echo "selected";}} ?>>หนังโรง</option>
+                            </select>
                             <button type="submit" class="btn btn-primary mb-2">ค้นหา</button>
                         </form>
                     </li>

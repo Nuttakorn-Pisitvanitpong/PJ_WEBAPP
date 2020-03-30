@@ -25,11 +25,24 @@
 					<li><a href="add_video.php" ><span class="glyphicon glyphicon-open"></span> อัพโหลดวิดี </a></li>
                     <li><a href="video_list.php"><span class="glyphicon glyphicon-play"></span> ดูวิดีโอของตนเอง </a></li>
                     <li>
+                        
+                    </li>
+                    <li>
                         <form class="form-inline" action="video_list_watch.php">
                             <div class="form-group mx-sm-3 mb-2">
                             <input type="text" class="form-control" id="inputPassword2" name="s_w" style="heigth: 100%">
                             </div>
+                            <select  name="type_v">
+                                <option value="หนังทั้งหมด" selected>หนังทั้งหมด</option>       
+                                <option value="หนังหมา">หนังหมา</option>
+                                <option value="หนังจีน">หนังจีน</option>
+                                <option value="หนัง18+">หนัง18+</option>
+                                <option value="หนังโรง">หนังโรง</option>
+                            </select>  
                             <button type="submit" class="btn btn-primary mb-2">ค้นหา</button>
+                        </form>
+                        <form action="video_list_watch.php">
+                            
                         </form>
                     </li>
                 </ul>

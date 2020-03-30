@@ -41,6 +41,12 @@
                 set your video name:<input type="text" name="video_name"><br><br>
                 Select video to upload :<input type="file" name="videoToUpload"><br>
                 Select imege to upload :<input type="file" name="fileToUpload"><br><br>
+                <select name="type_v">
+                            <option value="หนังหมา">หนังหมา</option>
+                            <option value="หนังจีน">หนังจีน</option>
+                            <option value="หนัง18+">หนัง18+</option>
+                            <option value="หนังโรง">หนังโรง</option>
+                </select>
                 <button type="submit" class="btn btn-primary mb-2">Upload</button>
             </form>
   </div>
